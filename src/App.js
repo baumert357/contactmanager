@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// Brad: "This is like the meeting place of all of our components."
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+
+// Custom components
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+
+// Custom css
+import "./App.css";
+
+class App extends Component {
+  render() {
+    return (
+      // Så att den får css
+      <div className="App">
+        <h1>The App Component</h1>
+        <Header />
+        <Contact />
+      </div>
+    );
+  }
 }
 
 export default App;
