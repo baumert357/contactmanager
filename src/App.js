@@ -1,26 +1,29 @@
-// Brad: "This is like the meeting place of all of our components."
-
 import React, { Component } from "react";
 
 // Custom components
-import Contact from "./components/Contact";
+import Contacts from "./components/Contacts";
 import Header from "./components/Header";
 
-// Custom css
-import "./App.css";
+// Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Custom CSS (Sass)
+import "./App.scss";
 
 // Denna sak "bundlar" alla komponenter.
 class App extends Component {
   render() {
     return (
-      // Så att den får css
-      <div className="App">
+      <div>
         <Header branding="Contact Manager" />
-        <Contact name="John Doe" email="jdoe@gmail.com" phone="555-555-5555" />
-        <Contact name="C-O Baumert" email="baumert@protonmail.com" phone="073-146-4457" />
+        <div className="container">
+          <Contacts />
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
+// Brad: "This is like the meeting place of all of our components."
